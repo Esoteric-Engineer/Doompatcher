@@ -113,7 +113,6 @@ def main(argv):
         else:
             shutil.rmtree(work, ignore_errors=True)
     print("\nDone in %.0f s: %s (%d bytes)" % (time.time() - t0, out, size))
-    print("In VERSUS, press DOWN twice from the first tile on the character select screen to reach Doom.")
 
 
 if __name__ == "__main__":
