@@ -32,7 +32,8 @@ def step(msg):
 
 
 def read_args(path):
-    lines = open(path).read().split()
+    with open(path) as f:
+        lines = f.read().splitlines()
     sets, adds = [], []
     for kind, spec in zip(lines[::2], lines[1::2]):
         (sets if kind == "--set" else adds).append(tuple(spec.split("=", 1)))
